@@ -1,0 +1,8 @@
+
+export FUSEKI_HOME=/opt/jena-fuseki-1.1.0
+
+export PATH=/vagrant/bin:$FUSEKI_HOME:$PATH
+
+
+
+
