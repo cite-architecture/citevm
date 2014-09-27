@@ -22,7 +22,7 @@ project.ext {
     collinv = ""
 
     // Path to directory where XML editions are found:
-    collarchive = "/Users/nsmith/repos/git/op/collections"
+    collarchive = ""
 
     // 4. Configuration of indices.
     // Path to index inventory file:

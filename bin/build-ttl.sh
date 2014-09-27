@@ -11,6 +11,9 @@ if [ "$#" -eq 1 ]; then
     MANAGER_CONF=$1
 fi
 
+
+
+cd /vagrant/repositories/citemgr
 $GRADLE clean
 echo ""
 echo "Building TTL using configuration file ${MANAGER_CONF}" 

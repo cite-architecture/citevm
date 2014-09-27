@@ -45,14 +45,15 @@ These scripts may be used to (re)build and install a servlet.
     - `-s`: directory citeservlet repository (default: `/vagrant/repositories/citeservlet`)
 - `run-war.sh`:  installs the `.war` file built by `build-war.sh` in tomcat, and restarts tomcat
 
-
-A sample session to build and run a CITE project from scratch could therefore look like this:
+The file `boot-cite.sh` runs these four scripts in the following order to  build and run a CITE project from scratch, using default values for all configuration files:
 
     build-ttl.sh
     load-ttls.sh
     build-war.sh
     run-war.sh
 
+You can clone this script and modify the default configuration settings: see the comments in the script
+for examples.
 
 ## Using locally hosted files with CITE Image service ##
 
