@@ -10,6 +10,8 @@ if [ -e /vagrant/repositories/citemgr/build/rdf/all.ttl ]; then
     TTL=/vagrant/repositories/citemgr/build/rdf/all.ttl
 else
     # Exit with error msg...
+    echo "load-ttl.sh: no TTL file found. Exiting"
+    exit -1
 fi
 echo "Load ttl from ${TTL}"
 echo ""
