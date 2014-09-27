@@ -4,20 +4,17 @@ GRADLE=`which gradle`
 GIT=`which git`
 MV=`which mv`
 
-# If no args, exit with error msg...
 
-REPOS=$1
+MANAGER_CONF=/vagrant/configs/managerconf.gradle
 
-BRANCH="master"
-if [ "$#" -eq 2 ]; then
-    BRANCH=$2
+if [ "$#" -eq 1 ]; then
+    MANAGER_CONF=$1
 fi
-echo "Checking out branch ${BRANCH} of $REPOS"
-cd /vagrant/repositories/$REPOS
-$GIT checkout $BRANCH
 
 $GRADLE clean
-$GRADLE allTtl
+echo ""
+echo "Building TTL using configuration file ${MANAGER_CONF}" 
+$GRADLE -Pconf=$MANAGER_CONF ttl
 
 
 

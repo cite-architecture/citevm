@@ -3,16 +3,11 @@
 
 # load and start fuseki via tdbloader2
 
-# Check Args for repos name...
-
-
-REPOS=$1
-
 
 # Use fresh build if available; otherwise, fall back on
 # version checked out from VM repository.
-if [ -e /vagrant/repositories/$1/build/rdf/all.ttl ]; then
-    TTL=/vagrant/repositories/$1/build/rdf/all.ttl
+if [ -e /vagrant/repositories/citemgr/build/rdf/all.ttl ]; then
+    TTL=/vagrant/repositories/citemgr/build/rdf/all.ttl
 else
     # Exit with error msg...
 fi

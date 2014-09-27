@@ -32,11 +32,9 @@ You can run any of these scripts separately or together to refresh or reinstall 
 The following scripts are used to build the TTL graph for a project, and load it in
 a SPARQL endpoint.
 
-*Not fully modified yet from model in hmt-digital-vm*
 
-- `build-ttl.sh`:  
-- `build-img-ttl.sh`  
-- `load-ttl.sh`:    
+- `build-ttl.sh`:  uses `citemgr` to build the RDF graph for a project.  An optional parameter may give the file name of a configuration file for `citemgr` (default: `/vagrant/configs/managerconf.gradle`)
+- `load-ttl.sh`:    (re)loads TTL data and (re)starts fuseki server
 
 These scripts may be used to (re)build and install a servlet.
 
@@ -50,7 +48,7 @@ These scripts may be used to (re)build and install a servlet.
 
 A sample session to build and run a CITE project from scratch could therefore look like this:
 
-    build-ttl.sh MGRCONF.gradle
+    build-ttl.sh
     load-ttls.sh
     build-war.sh
     run-war.sh
