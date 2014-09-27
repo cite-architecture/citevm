@@ -2,13 +2,6 @@
 
 Run a full suite of CITE services in a virtual machine provisioned by Vagrant to run either 64-bit or 32-bit Ubuntu 14.04.
 
-## Quick start ##
-
-
-
-## More details ##
-
-See the `cite-vm` manual, available in markdown format in the file 
 
 ## Caveat for Windows users ##
 
