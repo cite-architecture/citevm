@@ -9,8 +9,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # options are documented and commented below. For a complete reference,
     # please see the online documentation at vagrantup.com.
 
+
     # Every Vagrant virtual environment requires a box to build off of.
-    config.vm.box = "puphpet/ubuntu1404-x64"
+    if ENV['TINY']
+      config.vm.box = "ubuntu/trusty32"
+    else
+      config.vm.box = "puphpet/ubuntu1404-x64"
+    end
 
     # HMT boots from a simple shell script:
     config.vm.provision :shell, :path => "system/bootstrap.sh"
