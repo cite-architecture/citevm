@@ -37,12 +37,24 @@ These scripts may be used to
 - `run-war.sh`:  installs the `.war` file built by `build-war.sh` in tomcat, and restarts tomcat
 
 
-## Using locally hosted files with CITE Image service ##
+A sample session to build and run a CITE project from scratch could therefore look like this:
 
+    build-ttl.sh MGRCONF.gradle
+    load-ttls.sh
+    build-war.sh SRVLETCONF.gradle SRVLETLINKS.gradle SRVLETCUSTOM.gradle
+    run-war.sh
+
+
+## Using locally hosted files with CITE Image service ##
 
 The Vagrantfile that boots the virtual machine checks for an environmental variable named `PYRAMIDS`: if it is defined, it attempts to mount a file system found in the host operating system at `PYRAMIDS`  at `/pyramids` in the VM. You can set the environmental variable and start the VM in a single line like this:
 
     PYRAMIDS=/Volumes/images/pyramids vagrant up
 
 This example would start the VM, and make the host file system at `/Volumes/images/pyramids` visible in the VM at `/pyramids`.
+
+Be sure that `citemgr`'s configuration for your project has the value of the `pyramids` property set to the VM directory `/pyramids`:
+
+    pyramids = "/pyramids"
+
 
