@@ -1,11 +1,15 @@
 # citevm #
 
-Run full suite of CITE services in a virtual machine provisioned by Vagrant to run 64-bit Ubuntu 14.04.
+Run full suite of CITE services in a virtual machine provisioned by Vagrant to run either 64-bit or 32-bit Ubuntu 14.04.
 
-## Caveat ##
+## Caveat for Windows users ##
 
 Some Windows machines have default BIOS settings that prevent running a 64-bit VM.  Google is probably your best friend if you need to figure out what BIOS settings to change for your particular model of computer.
 
+The default setting installs a 64-bit guest machine.  You can override and run a 32-bit guest machine by setting the environmental variable TINY to any value.  You can start the VM with a 32-bit machine with the single line:
+
+    TINY=true vagrant up
+    
 ## Scripts to install and run CITE services ##
 
 Several scripts are located in `/vagrant/bin` (and therefore on the vagrant user's PATH).  
