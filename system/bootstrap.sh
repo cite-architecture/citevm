@@ -72,6 +72,11 @@ echo "Setting up account directory."
 /bin/cp "/vagrant/system/dotprofile" "/home/vagrant/.profile"
 
 
+# Install config files from templates
+/bin/cp "/vagrant/configs/managerconf.gradle-template" "/vagrant/configs/managerconf.gradle"
+/bin/cp "/vagrant/configs/servletconf.gradle-template" "/vagrant/configs/servletconf.gradle"
+/bin/cp "/vagrant/configs/servletlinks.gradle-template" "/vagrant/configs/servletlinks.gradle"
+
 # Set up proxying:
 /bin/cp /vagrant/system/tc-server.xml /etc/tomcat6/server.xml 
 /bin/cp /vagrant/system/000-default.conf-apache /etc/apache2/sites-available/000-default.conf
