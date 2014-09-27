@@ -24,6 +24,8 @@ The following three scripts are evoked by `refresh.sh` to install the initial CI
 - `get-jena.sh`:  installs jena-fuseki (server) and apache-jena (tools, including load tools)
 - `pull-repos.sh`:  clones or, if already cloned, updates the `citemgr` and `citeservlet` repositories in `/vagrant/repositories`
 
+You can run any of these scripts separately or together to refresh or reinstall parts of your system.
+
 ### Building and running a CITE system for a specific project ###
 
 
@@ -36,8 +38,13 @@ a SPARQL endpoint.
 - `build-img-ttl.sh`  
 - `load-ttl.sh`:    
 
-These scripts may be used to 
-- `build-war.sh`: builds a `.war` file for a project's `citeservlet` app.  Parameters to the script should give the three citeservlet configuration files (`conf`, `links` and `custom` overlay), and optionally a branch of the citeservlet repository to build from.  (Default is `master`.)
+These scripts may be used to (re)build and install a servlet.
+
+- `build-war.sh`: builds a `.war` file for a project's `citeservlet` app.  Command-line options it recognizes (with default values) are:
+    - `-c`: citeservlet conf file (default: `/vagrant/configs/servletconf.gradle`)
+    - `-l`: citeservlet links file (default: `/vagrant/configs/servletlinks.gradle`)
+    - `-o`: project's custom directory to overlay on citeservlet  (default: `/dev/null`)
+    - `-s`: directory citeservlet repository (default: `/vagrant/repositories/citeservlet`)
 - `run-war.sh`:  installs the `.war` file built by `build-war.sh` in tomcat, and restarts tomcat
 
 
@@ -45,7 +52,7 @@ A sample session to build and run a CITE project from scratch could therefore lo
 
     build-ttl.sh MGRCONF.gradle
     load-ttls.sh
-    build-war.sh SRVLETCONF.gradle SRVLETLINKS.gradle SRVLETCUSTOM.gradle
+    build-war.sh
     run-war.sh
 
 
