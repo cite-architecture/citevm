@@ -28,7 +28,7 @@
 	#Include conf-available/serve-cgi-bin.conf
 
  	<IfModule mod_proxy.c>
-        ProxyPass /cite-servlet http://localhost:8080/cite
+        ProxyPass /cite http://localhost:8080/cite-servlet
         ProxyPassReverse /cite http://localhost:8080/cite-servlet
     	</IfModule>
 </VirtualHost>

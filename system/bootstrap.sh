@@ -73,9 +73,18 @@ echo "Setting up account directory."
 
 
 # Install config files from templates
-/bin/cp "/vagrant/configs/managerconf.gradle-template" "/vagrant/configs/managerconf.gradle"
-/bin/cp "/vagrant/configs/servletconf.gradle-template" "/vagrant/configs/servletconf.gradle"
-/bin/cp "/vagrant/configs/servletlinks.gradle-template" "/vagrant/configs/servletlinks.gradle"
+if [ ! -f "/vagrant/configs/managerconf.gradle" ]
+then
+    /bin/cp "/vagrant/configs/managerconf.gradle-template"
+fi
+if [ ! -f "/vagrant/configs/servletconf.gradle" ]
+then
+    /bin/cp "/vagrant/configs/servletconf.gradle-template" "/vagrant/configs/servletconf.gradle"
+fi
+if [ ! -f "/vagrant/configs/servletlinks.gradle" ]
+then
+    /bin/cp "/vagrant/configs/servletlinks.gradle-template" "/vagrant/configs/servletlinks.gradle"
+fi
 
 # Set up proxying:
 /bin/cp /vagrant/system/tc-server.xml /etc/tomcat6/server.xml 
