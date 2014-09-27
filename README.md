@@ -14,7 +14,7 @@ Several scripts are located in `/vagrant/bin` (and therefore on the vagrant user
 ### Installation of the CITE system ###
 
 
-The following three scripts are evoked by `refresh.sh` to install the initial CITE system.  Ultimately, this should be evoked in the initial provisioning of the VM (but currently is is not).
+The following three scripts are evoked by `refresh.sh` to install the initial CITE infrastructure in the initial provisioning of the VM. 
 
 - `web.sh`:  copies content in `/vagrant/system/web` to the apache web server
 - `get-jena.sh`:  installs jena-fuseki (server) and apache-jena (tools, including load tools)

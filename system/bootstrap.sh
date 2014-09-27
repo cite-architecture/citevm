@@ -82,3 +82,5 @@ a2enmod proxy_http
 service tomcat6 restart
 service apache2 restart
 
+# Install basic CITE infrastructure:
+/vagrant/bin/refresh.sh
