@@ -1,4 +1,4 @@
-/* Configuration for Old Persian course repos
+/* Template for citemgr configuration
 */
 
 
@@ -15,7 +15,7 @@ project.ext {
     // 2. Configuration of image repository.
     // Path to directory with csv files defining image collections
     imgcolldir = ""
-    pyramids="/vagrant/pyramids"
+    pyramids="/pyramids"
 
     // 3. Configuration of CITE object repository.
     // Path to collection inventory file:

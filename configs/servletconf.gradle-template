@@ -3,23 +3,16 @@
 
 project.ext {
 
-    /* *****************************************  */		    
-    /* Two essential system configuration values  */
-    /* *****************************************  */		    
     // 1. Sparql endpoint (used by all services)
     sparqls  = "http://localhost:3030/ds/"
 
     // 2. Absolute or relative URL of IIPSrv fast cgi (used by image service)
-    iipsrv = "http://localhost/fcgi-bin/iipsrv.fcgi"
+    iipsrv = "http://localhost:8880/iipsrv/iipsrv.fcgi"
 	
     inventoryDir = "localconf/inventories"
 
-
-    /* *****************************************  */		    
-    /* Project-specific values                    */
-    /* *****************************************  */		    
     // Where you will install or run citeservlet
-    homeUrl = "http://localhost/cite/"
+    homeUrl = "http://localhost:8880/cite/"
 
     // Strings for labelling web pages
     projectlabel = "CITE services"
