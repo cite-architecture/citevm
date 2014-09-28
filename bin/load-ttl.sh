@@ -6,11 +6,11 @@
 
 # Use fresh build if available; otherwise, fall back on
 # version checked out from VM repository.
-if [ -e /vagrant/repositories/citemgr/build/rdf/all.ttl ]; then
-    TTL=/vagrant/repositories/citemgr/build/rdf/all.ttl
+if [ -f /vagrant/repositories/citemgr/build/ttl/all.ttl ]; then
+    TTL=/vagrant/repositories/citemgr/build/ttl/all.ttl
 else
     # Exit with error msg...
-    echo "load-ttl.sh: no TTL file found. Exiting"
+    echo "load-ttl.sh: no TTL file found at /vagrant/repositories/citemgr/build/ttl/all.ttl.. Exiting"
     exit -1
 fi
 echo "Load ttl from ${TTL}"
@@ -56,9 +56,9 @@ sudo chown -R vagrant $TDBDIR
 
 # 4. Restart fuseki:
 echo "Starting fuseki:  sudo $JENA --port=$PORT --config=$CONF"
-$JENA --port=$PORT --config=$CONF
+$JENA --port=$PORT --config=$CONF  &
 echo ""
-echo Done.  SPARQL endpoint running on port $PORT.
+echo Done.  SPARQL endpoint starting up on port $PORT.
 
 
 
