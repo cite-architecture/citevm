@@ -1,7 +1,4 @@
-#!/bin/bash
-
-
-# instead of?  !/usr/bin/env /bin/bash
+#!/usr/bin/env /bin/bash
 #
 # Run through full CITE service build and boot sequence,
 # using default settings for all configuration files.
@@ -11,9 +8,6 @@
 # -c servlet conf
 # -l servlet links
 # -o custom overlay
-
-
-echo "Setting default values before checking opts..."
 
 MANAGER_CONF=/vagrant/configs/managerconf.gradle
 SERVLET_CONF=/vagrant/configs/servletconf.gradle

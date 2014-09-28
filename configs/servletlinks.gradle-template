@@ -10,7 +10,10 @@ project.ext {
     texts  = "texts"
     indices =  "indices"
     collections = "collections"
-    images = "images"
+
+    // Not sure why this can't be a relative URL, but
+    // it doesn't survive proxying otherwise:
+    images = "http://localhost:8880/cite/images"
 
     // XSLT to use for constructing IIPMooViewer replies
     mooxslt = "xslt/citeimg_getiipmooviewer.xsl"
