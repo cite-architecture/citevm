@@ -50,7 +50,7 @@ fi
 
 
 
-echo "Using configuration files ${CONF} and ${links}"
+echo "Using configuration files ${CONF} and ${LINKS}"
 echo "Overlaying material from ${OVERLAY}"
 
 GIT=`which git`
