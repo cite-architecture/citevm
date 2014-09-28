@@ -10,8 +10,6 @@ project.ext {
     texts  = "texts"
     indices =  "indices"
     collections = "collections"
-
-    //images = "http://localhost:8880/cite/images"
     images = "images"
 
     // XSLT to use for constructing IIPMooViewer replies
