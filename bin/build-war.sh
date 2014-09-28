@@ -21,7 +21,7 @@ PULL_GIT=false
 #    echo "Usage: build_project.sh"
 #fi
 
-while getopts "s:c:l::" opt; do
+while getopts "s:c:l:o:" opt; do
     case $opt in 
 	s)
 	    CITESERVLET_DIR=$OPTARG
@@ -44,7 +44,7 @@ shift $((OPTIND-1))
 
 if [ $# -ne 0 ];  then
     echo "Bad syntax."
-    echo "Usage: build_project.sh [-s CITESERVLET_DIR] [-c SERVLET_CONF_FILE] [-l SERVLET_LINKS_FILE] [-o CUSTOM_OVERLAY_DIRECTORY]"
+    echo "Usage: build-war.sh [-s CITESERVLET_DIR] [-c SERVLET_CONF_FILE] [-l SERVLET_LINKS_FILE] [-o CUSTOM_OVERLAY_DIRECTORY]"
     exit -1
 fi
 
