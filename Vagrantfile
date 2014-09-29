@@ -20,7 +20,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # HMT boots from a simple shell script:
     config.vm.provision :shell, :path => "system/bootstrap.sh"
     config.vm.network "forwarded_port", guest: 80, host: 8880
-    
+    config.vm.network "forwarded_port", guest: 3030, host: 3330
+
+
     # Use PYRAMIDS to define a local path to the directory
     # root for the image service to use:
     if ENV['PYRAMIDS']
