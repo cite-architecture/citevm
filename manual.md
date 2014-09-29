@@ -23,18 +23,11 @@ This will build the basic 64-bit Ubuntu system for CITE services.  Some Windows 
     TINY=true vagrant up
 
 
-### Installing the CITE software ###
 
-
-Once your virtual machine is runing, log in to your virtual machine:
+Once your virtual machine is runing, you can log in to your virtual machine:
 
     vagrant ssh
     
-The first time you boot your system you need to run a script that installs or updates all the components of the CITE system with current versions.  From within your virtual machine, run
-
-    refresh.sh
- 
-
 
 ## Building and running your CITE project ##
 

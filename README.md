@@ -16,13 +16,9 @@ Start the VM either in 64-bit machine (default),
  
     TINY=true vagrant up
 
-Log in to your virtual machine:
+To log in to your virtual machine:
 
     vagrant ssh
- 
-The first time you boot your system you need to run a script that installs or updates all the components of the CITE system with current versions.  From within your virtual machine, run
-
-    refresh.sh
  
 
 ### Build and run CITE services ###
