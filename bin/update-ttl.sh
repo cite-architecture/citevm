@@ -22,7 +22,7 @@ if [ $# -ne 0 ];  then
     exit -1
 fi
 
-/vagrant/bin/built-ttl.sh $MANAGER_CONF
+/vagrant/bin/build-ttl.sh $MANAGER_CONF
 /vagrant/bin/load-ttl.sh
 
 
