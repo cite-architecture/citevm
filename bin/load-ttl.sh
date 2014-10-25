@@ -25,10 +25,10 @@ echo""
 TDBDIR=/tmp/tdbs
 CONF=/vagrant/system/fuseki-conf.ttl
 
-JENA=/opt/jena-fuseki-1.1.0/fuseki-server
-TDBLOADER=/opt/apache-jena-2.12.0/bin/tdbloader2
+JENA=/opt/jena-fuseki-1.1.1/fuseki-server
+TDBLOADER=/opt/apache-jena-2.12.1/bin/tdbloader2
 PORT=3030
-export FUSEKI_HOME=/opt/jena-fuseki-1.1.0
+export FUSEKI_HOME=/opt/jena-fuseki-1.1.1
 
 
 

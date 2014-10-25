@@ -1,8 +1,8 @@
 #!/usr/bin/env /bin/bash
 
 
-JENA_VERSION="apache-jena-2.12.0"
-FUSEKI_VERSION="jena-fuseki-1.1.0"
+JENA_VERSION="apache-jena-2.12.1"
+FUSEKI_VERSION="jena-fuseki-1.1.1"
 
 
 JENA_DIR="/opt/${JENA_VERSION}"
