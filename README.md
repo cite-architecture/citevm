@@ -2,7 +2,7 @@
 
 ##Planned 1.0 release##
 
-We plan to release a new version if the CITE Virtual Machine at DH 2016 in Krakow in July, 2016.
+We plan to release a new version of the CITE Virtual Machine at DH 2016 in Krakow in July, 2016.
 
 Stay tuned for more information!
 
