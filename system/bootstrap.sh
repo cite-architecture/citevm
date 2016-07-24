@@ -45,7 +45,7 @@ apt-get install -y iipimage-server
 # settings:
 if [ -d "/usr/share/iipimage-server" ]; then
     cp /usr/lib/iipimage-server/iipsrv.fcgi /usr/share/iipimage-server/iipsrv.fcgi
-else 
+else
     mkdir /usr/share/iipimage-server
     cp /usr/lib/iipimage-server/iipsrv.fcgi /usr/share/iipimage-server/iipsrv.fcgi
 fi
@@ -53,7 +53,7 @@ cp /vagrant/system/iipsrv.conf  /etc/apache2/mods-available/iipsrv.conf
 echo "Restarting apache with modified conifguration for iipsrv..."
 service apache2 restart
 
-apt-get install -y tomcat6
+apt-get install -y tomcat7
 
 
 # Practical to have CLI browsing for local work:
@@ -69,14 +69,14 @@ echo "Ran autoremove."
 
 
 echo "Setting up account directory."
-/bin/cp "/vagrant/system/dotprofile" "/home/vagrant/.profile"
+#/bin/cp "/vagrant/system/dotprofile" "/home/vagrant/.profile"
 
 
 # Install config files from templates
-if [ ! -f "/vagrant/configs/managerconf.gradle" ]
-then
-    /bin/cp "/vagrant/configs/managerconf.gradle-template"
-fi
+#if [ ! -f "/vagrant/configs/managerconf.gradle" ]
+#then
+#    /bin/cp "/vagrant/configs/managerconf.gradle-template"
+#fi
 if [ ! -f "/vagrant/configs/servletconf.gradle" ]
 then
     /bin/cp "/vagrant/configs/servletconf.gradle-template" "/vagrant/configs/servletconf.gradle"
@@ -87,14 +87,14 @@ then
 fi
 
 # Set up proxying:
-/bin/cp /vagrant/system/tc-server.xml /etc/tomcat6/server.xml 
+/bin/cp /vagrant/system/tc-server.xml /etc/tomcat7/server.xml
 /bin/cp /vagrant/system/000-default.conf-apache /etc/apache2/sites-available/000-default.conf
 
 a2enmod  proxy
 a2enmod proxy_http
 
-service tomcat6 restart
+service tomcat7 restart
 service apache2 restart
 
 # Install basic CITE infrastructure:
-/vagrant/bin/refresh.sh
+#/vagrant/bin/refresh.sh
