@@ -1,0 +1,30 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            citevm
+tagline:          'A virtual machine for CITE'
+description:      'A virtual machine for managing, building and serving CITE archives'
+baseurl: '/citevm/'
+
+
+author:
+  name:           'Neel Smith'
+ 
+
+paginate:         5
+
+version:          0.12.0
+
+links:
+  - title: Github project
+    url: https://github.com/cite-architecture/citevm
+    external: true
+  - title: CITE architecture home page
+    url: http://cite-architecture.github.io/
+    external: true
+   
