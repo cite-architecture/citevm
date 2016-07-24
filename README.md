@@ -1,14 +1,8 @@
 # citevm #
 
-##Planned 1.0 release##
-
-We plan to release a new version of the CITE Virtual Machine at DH 2016 in Krakow in July, 2016.
-
-Stay tuned for more information!
 
 
 
-## Original `citevm`
 
 Run a full suite of CITE services in a virtual machine provisioned by Vagrant to run either 64-bit or 32-bit Ubuntu 14.04.
 
