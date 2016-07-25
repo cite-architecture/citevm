@@ -3,13 +3,17 @@ title: "Elementary CITE VM"
 layout: page
 ---
 
+### Prerequisites
+
+- Vagrant: <http://www.vagrantup.com/downloads.html>
+- VirtualBox: <https://www.virtualbox.org/wiki/Downloads>
+
+The initial build requires internet access; after the initial build, you can run the virtual machine offline.
+
 ## Installation
 
-Building the basic VM is unchanged:  `vagrant up`
+From a terminal in the `citevm` directory, the command
 
-## CITE projects included
+    vagrant up
 
-The only projects that should be loaded from repositories are:
-
-- `cite-archive-manager`
-- your data project.  By default, perhaps load `easy_cts_archive` ?
+starts the virtual machine.  If you have never run the VM before, Vagrant will first build the virtual machine, then start it.  This can take some time, depending on the speed of your host machine and your internet connection.
