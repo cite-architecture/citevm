@@ -1,7 +1,4 @@
 
-export FUSEKI_HOME=/opt/jena-fuseki-1.1.0
-export GRADLE_HOME=/usr/share/gradle
+export PATH=/vagrant/scripts:$PATH
 
-export PATH=/vagrant/bin:$FUSEKI_HOME:$PATH
-
-
+export EDITOR=/usr/bin/atom
