@@ -1,4 +1,4 @@
 
-export PATH=/vagrant/scripts:$PATH
+export PATH=/vagrant/bin:$PATH
 
-export EDITOR=/usr/bin/atom
+export EDITOR=/usr/bin/scratch-text-editor
