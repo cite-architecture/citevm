@@ -6,11 +6,11 @@
 
 # Use fresh build if available; otherwise, fall back on
 # version checked out from VM repository.
-if [ -f /vagrant/repositories/citemgr/build/ttl/all.ttl ]; then
-    TTL=/vagrant/repositories/citemgr/build/ttl/all.ttl
+if [ -f /vagrant/data/cts.ttl ]; then
+    TTL=/vagrant/data/cts.ttl
 else
     # Exit with error msg...
-    echo "load-ttl.sh: no TTL file found at /vagrant/repositories/citemgr/build/ttl/all.ttl.. Exiting"
+    echo "load-ttl.sh: no TTL file found at /vagrant/data/cts.ttl.. Exiting"
     exit -1
 fi
 echo "Load ttl from ${TTL}"
@@ -25,10 +25,10 @@ echo""
 TDBDIR=/tmp/tdbs
 CONF=/vagrant/system/fuseki-conf.ttl
 
-JENA=/opt/jena-fuseki-1.1.1/fuseki-server
-TDBLOADER=/opt/apache-jena-2.12.1/bin/tdbloader2
+JENA=/opt/apache-jena-fuseki-2.4.0/fuseki-server
+TDBLOADER=/opt/apache-jena-3.1.0/bin/tdbloader2
 PORT=3030
-export FUSEKI_HOME=/opt/jena-fuseki-1.1.1
+export FUSEKI_HOME=/opt/apache-jena-fuseki-2.4.0
 
 
 
@@ -59,7 +59,3 @@ echo "Starting fuseki:  sudo $JENA --port=$PORT --config=$CONF"
 $JENA --port=$PORT --config=$CONF  &
 echo ""
 echo Done.  SPARQL endpoint starting up on port $PORT.
-
-
-
-
