@@ -75,7 +75,7 @@ apt-get install -y tomcat7
 cp /vagrant/system/dotprofile /home/vagrant/.profile
 chown vagrant:vagrant /home/vagrant/.profile
 
-
+#
 rm /home/vagrant/.config/plank/dock1/launchers/*.dockitem
 cp /vagrant/system/plank-dock1-launchers/*.dockitem /home/vagrant/.config/plank/dock1/launchers
 chown vagrant:vagrant /home/vagrant/.config/plank/dock1/launchers/*.dockitem
@@ -84,4 +84,20 @@ chown vagrant:vagrant /home/vagrant/.config/plank/dock1/launchers/*.dockitem
 ### SPARLQL END POINT #############################################
 ##
 # 1. Run /vagrant/bin/get-jena.sh script: installs without booting up.
-# 2.
+# 2. In /vagrant/cite-archive-manager, run gradle ctsttl
+# 3. Run /vagrant/bin/load-ttl.sh script.
+
+
+### CITE SERVLET  ##################################################
+##
+# 1. Run /vagrant/bin/refresh-repos.sh
+# 2. ....
+#
+# Need to compile cs2, and install in tomcat
+
+
+
+### FURTHER CONFIGURATION  ##########################################
+## - Consider proxying tc to apache, so exposing it to host machine easily
+## - Install pretty web site from Chris' Krakow machine
+## - Do we need /vagrant/configs?
