@@ -22,7 +22,19 @@ apt-get install -y dos2unix
 apt-get install -y git
 
 # JDK bundle
-apt-get install -y openjdk-7-jdk
+#apt-get install -y openjdk-7-jdk
+apt-get -y -q upgrade
+apt-get -y -q install software-properties-common htop
+add-apt-repository ppa:webupd8team/java
+apt-get -y -q update
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+apt-get -y -q install oracle-java8-installer
+apt-get -y -q install oracle-java7-installer
+update-java-alternatives -s java-8-oracle
+
+
+
 apt-get -y install groovy
 apt-get -y install gradle
 
@@ -67,3 +79,9 @@ chown vagrant:vagrant /home/vagrant/.profile
 rm /home/vagrant/.config/plank/dock1/launchers/*.dockitem
 cp /vagrant/system/plank-dock1-launchers/*.dockitem /home/vagrant/.config/plank/dock1/launchers
 chown vagrant:vagrant /home/vagrant/.config/plank/dock1/launchers/*.dockitem
+
+
+### SPARLQL END POINT #############################################
+##
+# 1. Run /vagrant/bin/get-jena.sh script: installs without booting up.
+# 2.
