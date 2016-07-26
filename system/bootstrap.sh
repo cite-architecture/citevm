@@ -48,6 +48,10 @@ cp /vagrant/system/iipsrv.conf  /etc/apache2/mods-available/iipsrv.conf
 echo "Restarting apache with modified conifguration for iipsrv..."
 service apache2 restart
 
+
+apt-get install -y tomcat7
+
+
 #########################################################
 ### Configure system and user settings        ###########
 #########################################################
