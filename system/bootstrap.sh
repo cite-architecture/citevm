@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# VERSION SETTINGS:
+JENA_VERSION="apache-jena-3.1.0"
+FUSEKI_VERSION="apache-jena-fuseki-2.4.0"
+SPARQLCTS_VERSION="sparqlcts-1.0.0"
 #
 # Add repository for an early-21st-century version of gradle:
 add-apt-repository ppa:cwchien/gradle
@@ -81,8 +85,7 @@ chown vagrant:vagrant /home/vagrant/.config/plank/dock1/launchers/*.dockitem
 ##
 
 
-JENA_VERSION="apache-jena-3.1.0"
-FUSEKI_VERSION="apache-jena-fuseki-2.4.0"
+
 
 
 JENA_DIR="/opt/${JENA_VERSION}"
@@ -185,8 +188,10 @@ cp /vagrant/cite-archive-manager/build/ttl/cts.ttl /vagrant/data
 # Need to compile cs2, and install in tomcat
 cd /vagrant/cs2/sparqlcts
 $GRADLE war
-cp /vagrant/cs2/sparqlcts/build/lib/sparql\*.war /var/lib/tomcat/webapp/sparqlcts.war
+cp /vagrant/cs2/sparqlcts/build/lib/${SPARQLCTS_VERSION}.war /var/lib/tomcat/webapp/sparqlcts.war
 
+service tomcat7 stop
+service tomcat7 start
 
 ### FURTHER CONFIGURATION  ##########################################
 ## - Consider proxying tc to apache, so exposing it to host machine easily
