@@ -18,34 +18,29 @@ From a terminal in the `citevm` directory, the command
 
 starts the virtual machine.  If you have never run the VM before, Vagrant will first build the virtual machine, then start it.  This can take some time, depending on the speed of your host machine and your internet connection.
 
+## Demos
 
-## Building and serving a CITE project
+- add demo file with sample of HMT TTL
+- build Anne Frank archive from scratch
+
+
+## Building and serving your own CITE project
 
 There are two parts to serving an archive of CITE data:
 
-1. build an RDF of the project, and load it into a SPARQL endpoint.  Here's how to [build and load RDF](./rdf-build) in your VM.
-2. install a client to work with the the SPARQL data.  Here's how to install the [generic CITE servlet `cs2`](./cs2) in your VM
+1. building an RDF of the project.  Here's how to do that.
+2. loading it into a SPARQL endpoint.  Here's how to [build and load RDF](./rdf-build) in your VM.
 
 
+The VM installs three generic CITE services as tomcat servlets: `texts` is a CTS service, `collections` is a CITE Collection service, and `images` is a service supporting the CITE Image Extension.  The Tomcat installation also includes a landing page named `cs2` linking to the three services.
 
-## Technical reference
-
-Layout of the VM
-
-tomcat :
-
-### Servlet container
+You can of course install your own servlets under tomcat, or add your own client applications that talk to any of the three services.
 
 
-`tomcat7` is running on port 8080, with CATALINA_HOME in `/usr/share/tomcat7` and CATALINA_BASE in `/var/lib/tomcat7`.  When the VM is provisioned, the file `/vagrant/system/tc-server.xml` is copied to  `/etc/tomcat7/server.xml`.  This defines a connector on port 8080 with proxying.
+## Running stuff
 
+Start fuseki: `load-ttl.sh`.  
 
-Configuration is in `/etc/default/tomcat7`
+TBD:
 
-
-
-### SPARQL endpoint
-
-`apache-jena` (for loading data with the `tdbloader2` tool) and `jena-fuseki` (the actual SPARQL endpoint) are both installed in `/opt`. The `load-ttl.sh` script uses the configuration file `system/fuseki-conf.ttl` to load data, then starts `fuseki-server` on port 3030.
-
-**Important technical note**:  The `load-ttl.sh` script uses `tbdloader2` to load data into fuseki.  `tbdloader2` does not function when its tdb files are located in a directory shared with the host operating system, so `load-ttl.sh` places them in `/tmp`.
+- add option to supply ttl file name.

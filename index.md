@@ -5,9 +5,9 @@ layout: page
 
 ## Current development
 
-The CITE virtual machine is being updated for the new version of citeservlet (`cs2`) and the new `cite-archive-manager` that are under development in 2016.  The new VM will include a GUI running Elementary OS.  In-progress notes and documenation are being put [here](elementary).
+The CITE virtual machine is being updated for the new version of citeservlet, [cs2](http://cite-architecture.github.io/cs2/), and the new [cite-archive-manager](https://github.com/cite-architecture/cite-archive-manager), both of which were developed in 2016.  The new VM includes a GUI running [Elementary OS](https://elementary.io/), and has passed initial tests on text, collection and image services.  In-progress documentation is being added [here](elementary).
 
-The first release will include `cs2` with a fully tested CTS subproject, whether or not other CITE services in `cs2` have been fully developed to a release-quality version.
+We expect to release this version of the CITE VM in early October, 2016, but the current fully working version is available in the `elementary` branch of the repository for those who don't want to wait for documentation.
 
 ## Original CITE VM
 
